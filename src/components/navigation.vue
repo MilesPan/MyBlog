@@ -1,6 +1,6 @@
 <template>
   <div
-    class="top-0 h-20 w-full flex justify-between bg-violet-600 bg-opacity-80 px-2"
+    class="top-0 h-20 w-full flex justify-between bg-violet-600 bg-opacity-80 px-2 relative"
   >
     <section class="left flex justify-between">
       <ul class="flex items-center text-gray-900">
@@ -34,7 +34,7 @@
         >回到首页</el-button
       > -->
     </section>
-    <section class="mid">
+    <section class="mid absolute left-1/2 -translate-x-1/2 h-full">
       <div class="logo h-full flex justify-center">
         <img
           src="/images/avator.jpg"

@@ -40,6 +40,7 @@ export default ({ command, mode }: ConfigEnv) => {
         "/api": {
           target: env.VITE_API_URL,
           changeOrigin: true,
+          
         },
         "/captcha/api/math": {
           target: env.VITE_API_URL,
