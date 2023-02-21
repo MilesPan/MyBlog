@@ -15,7 +15,6 @@
 </template>
 
 <script setup lang="ts">
-import Tracker from 'pdy-sdk-tracker'
 import loading from "@/store/loading";
 const show = computed(() => loading().show);
 </script>
