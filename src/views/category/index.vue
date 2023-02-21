@@ -1,5 +1,8 @@
 <template>
-  <ArticleList :cid="route.params.cid" :key="route.params.cid"></ArticleList>
+  <ArticleList
+    :cid="route.params.cid"
+    :key="route.params.cid as string"
+  ></ArticleList>
 </template>
 
 <script setup lang="ts">
