@@ -1,6 +1,7 @@
 import { store } from "@/utils";
 import { CacheEnum } from "@/enum/cacheTypes";
 import axios, { AxiosRequestConfig } from "axios";
+import loading from "@/store/loading";
 import { ElMessage } from "element-plus";
 export default class Axios {
   private instance;
@@ -29,6 +30,10 @@ export default class Axios {
   private interceptorsRequest() {
     this.instance.interceptors.request.use(
       (config) => {
+        if (!config.url?.includes("upload")) {
+          console.log("request", config.url);
+          loading().openLoading();
+        }
         let token = store.get(CacheEnum.TOKEN_NAME);
         if (token && config.headers) {
           config.headers.Authorization = "Bearer " + token;
@@ -44,11 +49,15 @@ export default class Axios {
   private interceptorsResponse() {
     this.instance.interceptors.response.use(
       (response) => {
+        console.log("response", response.config.url);
+
+        loading().closeLoading();
         // 2xx 范围内的状态码都会触发该函数。
         // 对响应数据做点什么
         return response;
       },
       (error) => {
+        loading().closeLoading();
         // 超出 2xx 范围的状态码都会触发该函数。
         // 对响应错误做点什么
         const errors: string[] | string =

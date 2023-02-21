@@ -21,6 +21,7 @@ declare module '@vue/runtime-core' {
     FormPanButton: typeof import('./../src/components/form/pan-button.vue')['default']
     FormPanInput: typeof import('./../src/components/form/pan-input.vue')['default']
     FormPanLink: typeof import('./../src/components/form/pan-link.vue')['default']
+    Loading: typeof import('./../src/components/loading/index.vue')['default']
     MarkdownEditor: typeof import('./../src/components/markdown/editor.vue')['default']
     Navigation: typeof import('./../src/components/navigation.vue')['default']
     Notification: typeof import('./../src/components/notification.vue')['default']

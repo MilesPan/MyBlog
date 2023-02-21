@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Loading></Loading>
     <Suspense>
       <router-view></router-view>
     </Suspense>
@@ -7,11 +8,16 @@
 </template>
 
 <script setup lang="ts">
-// const response = await fetch("http://127.0.0.1:5173/api/info").then((res) =>
-// const response = await info();
-// console.log(response.data);
-// const response = await login();
-// console.log(response.data);
+import Loading from "./components/loading/index.vue";
 </script>
 
-<style scoped></style>
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
