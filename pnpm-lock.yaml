@@ -22,7 +22,7 @@ specifiers:
   highlight.js: ^11.6.0
   lodash: ^4.17.21
   mockjs: ^1.1.0
-  pdy-sdk-tracker: ^1.0.1
+  pdy-sdk-tracker: ^1.0.2
   pinia: ^2.0.21
   postcss: ^8.4.16
   rollup-plugin-visualizer: ^5.8.1
@@ -56,7 +56,7 @@ dependencies:
   gsap: registry.npmmirror.com/gsap/3.11.4
   highlight.js: registry.npmmirror.com/highlight.js/11.7.0
   mockjs: registry.npmmirror.com/mockjs/1.1.0
-  pdy-sdk-tracker: 1.0.1
+  pdy-sdk-tracker: 1.0.2
   pinia: registry.npmmirror.com/pinia/2.0.32_typescript@4.9.5+vue@3.2.47
   vee-validate: registry.npmmirror.com/vee-validate/4.7.4_vue@3.2.47
   vue: registry.npmmirror.com/vue/3.2.47
@@ -300,8 +300,8 @@ packages:
     dev: true
     optional: true
 
-  /pdy-sdk-tracker/1.0.1:
-    resolution: {integrity: sha512-1S9lzR/2AlXq6SEjTx3HT3krz/s1iXg+3++0Kz3hzz6Bf+6AeP5jRmfB1zW0yl2U4d288MjNcLIim0nej8IWEg==}
+  /pdy-sdk-tracker/1.0.2:
+    resolution: {integrity: sha512-pVR0aeTcgFKeFbkPVt7PgF68V5UK+NGQohKXjRh3FK6pM/VvuJO1OeluKIutAnIuCoU0Z7e5Hy4/Svz35ocfQA==}
     dev: false
 
   registry.npmmirror.com/@antfu/utils/0.7.2:

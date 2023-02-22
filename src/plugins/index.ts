@@ -4,12 +4,14 @@ import setupIconPark from "./iconpark";
 // import setupElementplus from "./elementplus";
 import setupPinia from "./pinia";
 import { setupTailwindcss } from "./tailwindcss";
+import { setupTracker } from "./tracker";
 export function setupPlugins(app: App) {
   autoLoadComponent(app);
   setupTailwindcss();
   // setupElementplus(app);
   setupPinia(app);
   setupIconPark(app);
+  setupTracker();
 }
 // 自动注册全局组件
 function autoLoadComponent(app: App) {

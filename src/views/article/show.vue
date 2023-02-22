@@ -25,11 +25,15 @@
       </section>
     </h1>
 
-    <time
-      >发表时间:{{ article?.createdAt }} &nbsp;&nbsp;&nbsp;更新时间:{{
-        article?.updatedAt
-      }}</time
-    >
+    <section class="flex justify-between">
+      <time
+        >发表时间:{{ article?.createdAt }} &nbsp;&nbsp;&nbsp;更新时间:{{
+          article?.updatedAt
+        }}</time
+      >
+      <aside>浏览次数:{{ article?.readTimes }}</aside>
+    </section>
+
     <p class="editor-content-view" v-html="article?.content"></p>
   </main>
 </template>
@@ -48,7 +52,8 @@ main {
   h1 {
     @apply mb-2 border-b border-gray-600 pb-3 mt-4 text-lg text-gray-600;
   }
-  time {
+  time,
+  aside {
     @apply text-xs font-bold text-gray-400 my-2 block;
   }
 }

@@ -7,6 +7,8 @@
       class="gap-2 md:gap-0"
     >
       <router-link
+        tracker-event="click"
+        :tracker-key="article.id"
         :to="{ name: 'article.show', params: { id: article.id } }"
         class="rounded-xl md:rounded-none"
         >{{ article.title }}</router-link

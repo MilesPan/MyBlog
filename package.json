@@ -24,7 +24,7 @@
     "gsap": "^3.11.1",
     "highlight.js": "^11.6.0",
     "mockjs": "^1.1.0",
-    "pdy-sdk-tracker": "^1.0.1",
+    "pdy-sdk-tracker": "^1.0.2",
     "pinia": "^2.0.21",
     "vee-validate": "^4.5.8",
     "vue": "^3.2.37",

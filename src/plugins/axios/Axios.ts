@@ -31,7 +31,6 @@ export default class Axios {
     this.instance.interceptors.request.use(
       (config) => {
         if (!config.url?.includes("upload")) {
-          console.log("request", config.url);
           loading().openLoading();
         }
         let token = store.get(CacheEnum.TOKEN_NAME);
@@ -49,8 +48,6 @@ export default class Axios {
   private interceptorsResponse() {
     this.instance.interceptors.response.use(
       (response) => {
-        console.log("response", response.config.url);
-
         loading().closeLoading();
         // 2xx 范围内的状态码都会触发该函数。
         // 对响应数据做点什么
