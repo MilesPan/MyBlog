@@ -16,7 +16,6 @@
 
 <script setup lang="ts">
 import _ from "lodash";
-// let { clientWidth: width, clientHeight: height } = document.documentElement;
 let width = ref(document.documentElement.clientWidth);
 let height = ref(document.documentElement.clientHeight);
 onMounted(() => {

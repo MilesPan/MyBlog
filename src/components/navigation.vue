@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="top-0 h-20 w-full flex justify-between bg-violet-600 bg-opacity-80 px-2 relative"
-  >
+  <div class="top-0 h-20 w-full flex justify-between px-2 relative nav">
     <section class="left flex justify-between">
       <ul class="flex items-center text-gray-900">
         <li
@@ -12,35 +10,10 @@
           {{ item.title }}
         </li>
       </ul>
-      <!-- <el-button
-        type="primary"
-        size="default"
-        class="md:!m-0"
-        @click="$router.push({ name: 'article.create' })"
-        >发表文章</el-button
-      >
-      <el-button
-        type="primary"
-        size="default"
-        class="md:!m-0"
-        @click="$router.push({ name: 'login' })"
-        >管理员登录</el-button
-      >
-      <el-button
-        type="primary"
-        size="default"
-        class="md:!m-0"
-        @click="$router.push('/')"
-        >回到首页</el-button
-      > -->
     </section>
     <section class="mid absolute left-1/2 -translate-x-1/2 h-full">
       <div class="logo h-full flex justify-center">
-        <img
-          src="/images/avator.jpg"
-          alt=""
-          class="rounded-full overflow-hidden border-8 border-blue-400"
-        />
+        <img src="/images/avator.png" alt="" class="overflow-hidden" />
       </div>
     </section>
     <section class="right flex justify-between">
@@ -78,4 +51,13 @@ const navigations = ref<INavItem[]>([
 ]);
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.nav {
+  background: linear-gradient(to right, #4063bc, #cd4dc5e4, #8713dae4);
+  background-size: 200%;
+  transition: background-position 0.5s;
+}
+.nav:hover {
+  background-position: 100%;
+}
+</style>

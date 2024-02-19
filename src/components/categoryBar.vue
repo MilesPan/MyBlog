@@ -31,7 +31,7 @@ await all();
 nav {
   @apply flex md:flex-row  flex-col gap-2 items-center flex-wrap;
   section {
-    @apply bg-violet-600 hover:bg-emerald-600  duration-500 text-white py-2 px-3 cursor-pointer rounded-md hover:shadow-lg   hover:rounded-2xl;
+    @apply bg-violet-600 hover:bg-emerald-600 duration-500 text-white py-2 px-3 cursor-pointer rounded-md hover:shadow-lg;
     &.active {
       @apply bg-green-600 font-bold;
     }
