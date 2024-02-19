@@ -3,6 +3,7 @@ import router, { setupRouter } from "@/router";
 import "@/styles/global.scss";
 import "animate.css";
 import "default-passive-events";
+import "github-markdown-css/github-markdown-light.css";
 
 import { createApp } from "vue";
 import { setupPlugins } from "./plugins";

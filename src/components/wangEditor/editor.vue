@@ -4,7 +4,6 @@ import { IDomEditor, IEditorConfig, IToolbarConfig } from "@wangeditor/editor";
 import { Editor, Toolbar } from "@wangeditor/editor-for-vue";
 import "@wangeditor/editor/dist/css/style.css";
 import { onBeforeUnmount, ref, shallowRef, watch } from "vue";
-import hljs from "highlight.js";
 interface IProps {
   modelValue: string;
   height: number;

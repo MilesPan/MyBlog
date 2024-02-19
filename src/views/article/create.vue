@@ -25,7 +25,8 @@
       clearable
       class="mb-2"
     />
-    <Editor v-model="article.content" :height="500"></Editor>
+    <!-- <Editor v-model="article.content" :height="500"></Editor> -->
+    <MarkDown v-model="article.content" :height="500"></MarkDown>
     <el-button
       type="primary"
       size="default"
@@ -39,6 +40,7 @@
 <script setup lang="ts">
 import { Article } from "@/apis/article";
 import Editor from "@/components/wangEditor/editor.vue";
+import MarkDown from "@/components/markdown/editor.vue";
 import useArticle from "@/composables/useArticle";
 import useCategory from "@/composables/useCategory";
 const { add } = useArticle();

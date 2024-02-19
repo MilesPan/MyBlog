@@ -34,7 +34,10 @@
       <aside>浏览次数:{{ article?.readTimes }}</aside>
     </section>
 
-    <p class="editor-content-view" v-html="article?.content"></p>
+    <p
+      class="editor-content-view markdown-body"
+      v-html="marked.parse(article?.content ?? '')"
+    ></p>
   </main>
 </template>
 
@@ -42,9 +45,24 @@
 import { useRoute } from "vue-router";
 import useArticle from "@/composables/useArticle";
 import user from "@/utils/user";
+
+import { Marked } from "marked";
+import { markedHighlight } from "marked-highlight";
+import hljs from "highlight.js";
+import "highlight.js/styles/atom-one-dark.css";
+
 const { article, find, del } = useArticle();
 const route = useRoute();
 await find(+route.params.id);
+
+const marked = new Marked(
+  markedHighlight({
+    langPrefix: "hljs language-",
+    highlight(code, lang) {
+      return hljs.highlight(code, { language: lang }).value;
+    },
+  })
+);
 </script>
 
 <style scoped lang="scss">
